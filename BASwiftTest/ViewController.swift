@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var dataArray = ["DemoVC1：tableView简单用法", "DemoVC2：调用系统视频播放器", "第三行"];
+    var dataArray = ["1：tableView简单用法",
+        "2：调用系统视频播放器",
+        "3：scrollView简单用法"];
     
     let tableView = UITableView()
     
