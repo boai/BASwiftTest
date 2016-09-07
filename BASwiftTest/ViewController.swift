@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var dataArray = ["1：tableView简单用法",
+    let dataArray : [String] = ["1：tableView简单用法",
         "2：调用系统视频播放器",
         "3：scrollView简单用法"];
     
@@ -77,6 +77,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let demoVC2 = DemoVC2()
             demoVC2.title = dataArray[indexPath.row]
             self.navigationController?.pushViewController(demoVC2, animated: true)
+        }
+        if indexPath.row == 2 {
+            let demoVC3 = DemoVC3()
+            
+            self.navigationController?.pushViewController(demoVC3, animated: true)
         }
     }
     
