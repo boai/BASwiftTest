@@ -20,6 +20,7 @@
 		C43B8BDF1D7E910300C148D8 /* DemoVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B8BDE1D7E910300C148D8 /* DemoVC3.swift */; };
 		C43B8BE11D7E932D00C148D8 /* DemoVC3_View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B8BE01D7E932D00C148D8 /* DemoVC3_View1.swift */; };
 		C4DA2EA21D7FA67A002B14D7 /* BASwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA2EA11D7FA67A002B14D7 /* BASwiftTest.swift */; };
+		C4DA2EA41D7FF43A002B14D7 /* DemoVC3_View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA2EA31D7FF43A002B14D7 /* DemoVC3_View2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C43B8BDE1D7E910300C148D8 /* DemoVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoVC3.swift; sourceTree = "<group>"; };
 		C43B8BE01D7E932D00C148D8 /* DemoVC3_View1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoVC3_View1.swift; sourceTree = "<group>"; };
 		C4DA2EA11D7FA67A002B14D7 /* BASwiftTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASwiftTest.swift; sourceTree = "<group>"; };
+		C4DA2EA31D7FF43A002B14D7 /* DemoVC3_View2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoVC3_View2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				C43B8BDE1D7E910300C148D8 /* DemoVC3.swift */,
 				C43B8BE01D7E932D00C148D8 /* DemoVC3_View1.swift */,
+				C4DA2EA31D7FF43A002B14D7 /* DemoVC3_View2.swift */,
 			);
 			path = DemoVC3;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C43B8BD71D7E6A2E00C148D8 /* DemoVC2.swift in Sources */,
+				C4DA2EA41D7FF43A002B14D7 /* DemoVC3_View2.swift in Sources */,
 				C43B8BDF1D7E910300C148D8 /* DemoVC3.swift in Sources */,
 				C43B8BE11D7E932D00C148D8 /* DemoVC3_View1.swift in Sources */,
 				C43B8BBD1D7E699A00C148D8 /* ViewController.swift in Sources */,
