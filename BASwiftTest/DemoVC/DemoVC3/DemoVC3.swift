@@ -15,6 +15,12 @@ class DemoVC3: UIViewController {
     let tableView2 = UITableView()
     let tableView3 = UITableView()
     
+    var subView1 : DemoVC3_View1?
+    
+    var subView2 : DemoVC3_View1?
+    
+    var subView3 : DemoVC3_View1?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,28 +37,37 @@ class DemoVC3: UIViewController {
     func setupScrollView() {
     
         // 2.1设置初始属性
-        scrollView.frame = CGRectMake(0, 0, BASCREEN_WIDTH, BAKSCREEN_HEIGHT)
-        scrollView.contentSize = CGSizeMake(0.0, BAKSCREEN_HEIGHT * 3)
         scrollView.pagingEnabled = true
         scrollView.backgroundColor = UIColor.whiteColor()
         view.addSubview(scrollView)
 
     }
     
+    override func viewDidLayoutSubviews() {
+        scrollView.frame = CGRectMake(0, 0, BASCREEN_WIDTH, BAKSCREEN_HEIGHT)
+        scrollView.contentSize = CGSizeMake(0.0, BAKSCREEN_HEIGHT * 3)
+        
+        subView1?.frame = CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT)
+        
+        subView2?.frame = CGRect(x: 0.0, y: BAKSCREEN_HEIGHT, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT)
+        
+        subView3?.frame = CGRect(x: 0.0, y: BAKSCREEN_HEIGHT * 2, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT)
+    }
+    
     
     func setupSubView() {
         
-        let subView1 = DemoVC3_View1(frame: CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱是逗B吗?")
-        subView1.backgroundColor = UIColor.greenColor()
-        scrollView.addSubview(subView1)
+        subView1 = DemoVC3_View1(frame: CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱是逗B吗?")
+        subView1!.backgroundColor = UIColor.greenColor()
+        scrollView.addSubview(subView1!)
         
-        let subView2 = DemoVC3_View1(frame: CGRect(x: 0.0, y: BAKSCREEN_HEIGHT, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱真的是逗B吗?")
-        subView2.backgroundColor = UIColor.cyanColor()
-        scrollView.addSubview(subView2)
+        subView2 = DemoVC3_View1(frame: CGRect(x: 0.0, y: BAKSCREEN_HEIGHT, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱真的是逗B吗?")
+        subView2!.backgroundColor = UIColor.cyanColor()
+        scrollView.addSubview(subView2!)
         
-        let subView3 = DemoVC3_View1(frame: CGRect(x: 0.0, y: BAKSCREEN_HEIGHT * 2, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱真的是逗B!!")
-        subView3.backgroundColor = UIColor.redColor()
-        scrollView.addSubview(subView3)
+        subView3 = DemoVC3_View1(frame: CGRect(x: 0.0, y: BAKSCREEN_HEIGHT * 2, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱真的是逗B!!")
+        subView3!.backgroundColor = UIColor.redColor()
+        scrollView.addSubview(subView3!)
     }
     
 
