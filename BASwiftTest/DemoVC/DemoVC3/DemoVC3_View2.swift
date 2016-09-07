@@ -8,12 +8,11 @@
 
 import UIKit
 
-// 定义block、有返回值
-var DemoVC3_View2ActionBlock : ((tableView: UITableView, indexPath: NSIndexPath, dataArray : NSArray) -> ())?
-
 class DemoVC3_View2: UIView, UITableViewDelegate, UITableViewDataSource {
 
 //    var tableView = UITableView()
+    // 定义block、有返回值
+    var DemoVC3_View2ActionBlock : ((tableView: UITableView, indexPath: NSIndexPath, dataArray : NSArray) -> ())?
     
     var dataArray : [String] = ["DemoVC3_View2 第1行",
         "DemoVC3_View2 第2行",

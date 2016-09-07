@@ -59,7 +59,7 @@ class DemoVC3: UIViewController {
     
     func setupSubView() {
         
-        subView1 = DemoVC3_View1(frame: CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "晓峰是逗B吗?")
+        subView1 = DemoVC3_View1(frame: CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱是逗B吗?")
         subView1!.backgroundColor = UIColor.greenColor()
         scrollView.addSubview(subView1!)
         
@@ -67,11 +67,14 @@ class DemoVC3: UIViewController {
         subView2!.backgroundColor = UIColor.cyanColor()
         scrollView.addSubview(subView2!)
         
-        subView2.DemoVC3_View2ActionBlock = {(tableView, indexPath, dataArray) -> Void in
-        
+        subView2!.DemoVC3_View2ActionBlock = { (tableView: UITableView, indexPath: NSIndexPath, dataArray : NSArray) -> Void in
+//            let alertView = UIAlertView(title: "论博爱是否逗B", message: "博爱是逗B", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "一定是", "只能是了!!")
+//            alertView.show()
+            let alert = UIAlertController(title: "论博爱是否逗B", message: "博爱是逗B", preferredStyle: .Alert)
+            self .presentViewController(alert, animated: true, completion: nil)
         }
         
-        subView3 = DemoVC3_View1(frame: CGRect(x: BASCREEN_WIDTH * 2, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "晓峰真的是逗B!!")
+        subView3 = DemoVC3_View1(frame: CGRect(x: BASCREEN_WIDTH * 2, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱真的是逗B!!")
         subView3!.backgroundColor = UIColor.redColor()
         scrollView.addSubview(subView3!)
     }
