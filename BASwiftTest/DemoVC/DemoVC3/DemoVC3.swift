@@ -59,7 +59,7 @@ class DemoVC3: UIViewController {
     
     func setupSubView() {
         
-        subView1 = DemoVC3_View1(frame: CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱是逗B吗?")
+        subView1 = DemoVC3_View1(frame: CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "晓峰是逗B吗?")
         subView1!.backgroundColor = UIColor.greenColor()
         scrollView.addSubview(subView1!)
         
@@ -70,11 +70,20 @@ class DemoVC3: UIViewController {
         subView2!.DemoVC3_View2ActionBlock = { (tableView: UITableView, indexPath: NSIndexPath, dataArray : NSArray) -> Void in
 //            let alertView = UIAlertView(title: "论博爱是否逗B", message: "博爱是逗B", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "一定是", "只能是了!!")
 //            alertView.show()
-            let alert = UIAlertController(title: "论博爱是否逗B", message: "博爱是逗B", preferredStyle: .Alert)
-            self .presentViewController(alert, animated: true, completion: nil)
+            let alertController = UIAlertController(title: "论晓峰是否逗B", message: "晓峰是逗B", preferredStyle: .Alert)
+            
+            let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
+            let okAction = UIAlertAction(title: "好的", style: .Default,
+                handler: {
+                    action in
+                    print("点击了确定")
+            })
+            alertController.addAction(cancelAction)
+            alertController.addAction(okAction)
+            self .presentViewController(alertController, animated: true, completion: nil)
         }
         
-        subView3 = DemoVC3_View1(frame: CGRect(x: BASCREEN_WIDTH * 2, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "博爱真的是逗B!!")
+        subView3 = DemoVC3_View1(frame: CGRect(x: BASCREEN_WIDTH * 2, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT), text: "晓峰真的是逗B!!")
         subView3!.backgroundColor = UIColor.redColor()
         scrollView.addSubview(subView3!)
     }
