@@ -11,9 +11,6 @@ import UIKit
 class DemoVC3: UIViewController {
 
     var scrollView = UIScrollView()
-//    let tableView1 = UITableView()
-//    let tableView2 = UITableView()
-//    let tableView3 = UITableView()
     
     var subView1 : DemoVC3_View1?
     
@@ -46,7 +43,7 @@ class DemoVC3: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        scrollView.frame = CGRectMake(0, 0, BASCREEN_WIDTH, BAKSCREEN_HEIGHT)
+        scrollView.frame = CGRectMake(0, 64, BASCREEN_WIDTH, BAKSCREEN_HEIGHT)
         scrollView.contentSize = CGSizeMake(BASCREEN_WIDTH * 3, BAKSCREEN_HEIGHT)
         
         subView1?.frame = CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT)
@@ -68,8 +65,7 @@ class DemoVC3: UIViewController {
         scrollView.addSubview(subView2!)
         
         subView2!.DemoVC3_View2ActionBlock = { (tableView: UITableView, indexPath: NSIndexPath, dataArray : NSArray) -> Void in
-//            let alertView = UIAlertView(title: "论博爱是否逗B", message: "博爱是逗B", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "一定是", "只能是了!!")
-//            alertView.show()
+
             let alertController = UIAlertController(title: "论晓峰是否逗B", message: "晓峰是逗B", preferredStyle: .Alert)
             
             let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)

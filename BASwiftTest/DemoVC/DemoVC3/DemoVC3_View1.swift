@@ -15,7 +15,7 @@ class DemoVC3_View1: UIView {
     init(frame: CGRect,text : String) {
         super.init(frame: frame)
         
-        label.frame = CGRect(origin: CGPointZero, size: CGSize(width: BASCREEN_WIDTH, height: 30.0))
+        label.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: BASCREEN_WIDTH, height: 30.0))
         label.text = text
         label.textAlignment = .Center
         

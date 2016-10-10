@@ -26,7 +26,6 @@ class DemoVC3_View2: UIView, UITableViewDelegate, UITableViewDataSource {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
         super.addSubview(tableView)
     }
     
@@ -39,7 +38,7 @@ class DemoVC3_View2: UIView, UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    //MARK: - lazy
+    // MARK: - lazy
     lazy var tableView : UITableView = {
     
         let _tableView = UITableView(frame: CGRectMake(0, 0, BASCREEN_WIDTH, BAKSCREEN_HEIGHT), style: UITableViewStyle.Grouped)
