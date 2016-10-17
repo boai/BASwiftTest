@@ -41,18 +41,16 @@ class DemoVC3_View2: UIView, UITableViewDelegate, UITableViewDataSource {
     // MARK: - lazy
     lazy var tableView : UITableView = {
     
-        let _tableView = UITableView(frame: CGRectMake(0, 0, BASCREEN_WIDTH, BAKSCREEN_HEIGHT), style: UITableViewStyle.Grouped)
+        let _tableView = UITableView(frame: self.bounds, style: UITableViewStyle.Plain)
         _tableView.delegate = self
         _tableView.dataSource = self
         _tableView.scrollEnabled = true
 
-        _tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+//        _tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         _tableView.backgroundColor = UIColor.yellowColor()
-        
+        _tableView.tableFooterView = UIView()
         self.addSubview(_tableView)
 
-//        let autoResizing : UIViewAutoresizing = [.FlexibleBottomMargin, .FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleWidth]
-//        _tableView.autoresizingMask = autoResizing
         return _tableView
     }()
     

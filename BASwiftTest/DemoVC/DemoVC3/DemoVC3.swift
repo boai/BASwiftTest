@@ -22,7 +22,7 @@ class DemoVC3: UIViewController {
         super.viewDidLoad()
 
         // 1.隐藏状态栏
-        UIApplication.sharedApplication().statusBarHidden = true
+//        UIApplication.sharedApplication().statusBarHidden = true
         
         self.automaticallyAdjustsScrollViewInsets = false
         // 2.初始化scrollview
@@ -38,19 +38,20 @@ class DemoVC3: UIViewController {
         scrollView.pagingEnabled = true
         scrollView.bounces = false
         scrollView.backgroundColor = UIColor.whiteColor()
+        scrollView.indicatorStyle = UIScrollViewIndicatorStyle.Default
         view.addSubview(scrollView)
 
     }
     
     override func viewDidLayoutSubviews() {
-        scrollView.frame = CGRectMake(0, 64, BASCREEN_WIDTH, BAKSCREEN_HEIGHT)
+        scrollView.frame = CGRectMake(0, 0, BASCREEN_WIDTH, BAKSCREEN_HEIGHT)
         scrollView.contentSize = CGSizeMake(BASCREEN_WIDTH * 3, BAKSCREEN_HEIGHT)
         
-        subView1?.frame = CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT)
+        subView1?.frame = CGRect(x: 0.0, y: 0.0, width: BASCREEN_WIDTH, height: scrollView.frame.height)
         
-        subView2?.frame = CGRect(x: BASCREEN_WIDTH, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT)
+        subView2?.frame = CGRect(x: BASCREEN_WIDTH, y: 0.0, width: BASCREEN_WIDTH, height: scrollView.frame.height)
         
-        subView3?.frame = CGRect(x: BASCREEN_WIDTH * 2, y: 0.0, width: BASCREEN_WIDTH, height: BAKSCREEN_HEIGHT)
+        subView3?.frame = CGRect(x: BASCREEN_WIDTH * 2, y: 0.0, width: BASCREEN_WIDTH, height: scrollView.frame.height)
     }
     
     
